@@ -11,25 +11,34 @@ public class DriverClass {
     "Gary Richarson",
     "Fuzzy Topology" ,
     2599 );
+    
     s.printInvoice();
+
     //***********
+
     int [] gradCrnsTaken = {7587,8997} ;
     s = new MsStudent ( "Emily Jones",
     "em1254",
     gradCrnsTaken,
     1997);
+    
     s.printInvoice();
+
     //***********
+
     int [] undergradCrnsTaken = {4587,2599};
     s = new UndergraduateStudent ("Jamila Jones" ,
     "ja5225" ,
     undergradCrnsTaken ,
     3.0,
     false );
+    
     s.printInvoice();
+
   }//end of main
 }
   //---------------------------
+
   abstract class Student {
     // . . .
     public Student ( String name , String id) {
