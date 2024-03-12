@@ -44,9 +44,10 @@ public class DriverClass {
     "1997", "5696", "7587", "1599", "6997", "2696", "5580", "2099", "4997", "3696"};
 
     String courseArray [] = {"MAT 236", "COP 220", "GOL 124", "COP 100", "MAT 136", "COP 260", "CAP 424",
-  "KOL 110", "MAT 936", "COP 111", "GOL 109", "COP 101", "MAT 636", "COP 268", "CAP 427", "KOL 910"};
+    "KOL 110", "MAT 936", "COP 111", "GOL 109", "COP 101", "MAT 636", "COP 268", "CAP 427", "KOL 910"};
 
-  
+    String creditHoursArray [] = {"4", "3", "1", "3", "1", "3", "1", "2", "5", "3", "1", "3", "2", "3", "1", "2"};
+    
     public Student ( String name , String id) {
       // . . .
     }
