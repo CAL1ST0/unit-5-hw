@@ -1,6 +1,6 @@
 //unit5.hw
 //Group members: Isaac Calisto, Ethan Niessener
-//imports...
+//imports
 public class DriverClass {
   // DO NOT CHANGE ANYTHING IN THIS CLASS (DriverClass)
   public static void main(String[] args) {
