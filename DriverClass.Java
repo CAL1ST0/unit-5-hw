@@ -68,6 +68,7 @@ public class DriverClass {
       super (name , id );
       // . . .
     }
+
     @Override
     public void printInvoice() {
       System.out.println("VALENCE COLLEGE");
@@ -80,7 +81,12 @@ public class DriverClass {
   }
   //---------------------------
   abstract class GraduateStudent extends Student {
-  // . . .
+    
+    private String studentName, id;
+    private int [] gradCrnsTaken;
+    private int TA;
+
+
     public GraduateStudent ( String name , String id , int crn ) {
       //crn is the crn that the grad student is a teaching assistant for
       super ( name , id );
@@ -89,7 +95,9 @@ public class DriverClass {
   }
   //---------------------------
   class PhdStudent extends GraduateStudent {
-    // . . .
+    private String studentName, id, advisor, researchSubject;
+    private int TA;
+
     public PhdStudent (String name, String id , String advisor, String researchSubject , int crn ) {
       //crn is the course number that the Phd student is a teaching assistant for
       super ( name , id , crn );
