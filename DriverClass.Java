@@ -62,7 +62,12 @@ public class DriverClass {
     }
     @Override
     public void printInvoice() {
-      // . . .
+      System.out.println("VALENCE COLLEGE");
+      System.out.println("ORLANDO FL 10101");
+      System.out.println("----------------------");
+      System.out.println();
+      System.out.println("Fee Invoice Prepared for Student: ");
+
     }
   }
   //---------------------------
@@ -84,7 +89,12 @@ public class DriverClass {
     }
     @Override
     public void printInvoice() {
-      // . . .
+       System.out.println("VALENCE COLLEGE");
+      System.out.println("ORLANDO FL 10101");
+      System.out.println("----------------------");
+      System.out.println();
+      System.out.println("Fee Invoice Prepared for Student: ");
+      
     }
   }
   //---------------------------
@@ -98,6 +108,11 @@ public class DriverClass {
     }
     @Override
     public void printInvoice() {
-      // . . .
+      System.out.println("VALENCE COLLEGE");
+      System.out.println("ORLANDO FL 10101");
+      System.out.println("----------------------");
+      System.out.println();
+      System.out.println("Fee Invoice Prepared for Student: ");
+      
     }
   }
