@@ -48,6 +48,8 @@ public class DriverClass {
 
     String creditHoursArray [] = {"4", "3", "1", "3", "1", "3", "1", "2", "5", "3", "1", "3", "2", "3", "1", "2"};
     
+    private String name, id;
+
     public Student ( String name , String id) {
       // . . .
     }
@@ -55,7 +57,13 @@ public class DriverClass {
   }
   //---------------------------
   class UndergraduateStudent extends Student{
-    // . . .
+    
+    private String studentName, id;
+    private int [] undergradCrnsTaken;
+    private double gpa;
+    private boolean resident;
+
+
     public UndergraduateStudent(String name , String id , int [] undergradCrnsTaken , double gpa, boolean resident){
       super (name , id );
       // . . .
