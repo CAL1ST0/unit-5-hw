@@ -1,5 +1,5 @@
 //unit5.hw
-//Group members: Isaac Calisto, Ethan Niessener
+//Group members: Isaac Calisto, Ethan Niessner
 //imports...
 public class DriverClass {
   // DO NOT CHANGE ANYTHING IN THIS CLASS (DriverClass)
