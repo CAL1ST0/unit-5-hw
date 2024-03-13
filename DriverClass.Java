@@ -37,6 +37,7 @@ public class DriverClass {
 
   }//end of main
 }
+
   //---------------------------
 
   abstract class Student {
@@ -48,14 +49,17 @@ public class DriverClass {
 
     String creditHoursArray [] = {"4", "3", "1", "3", "1", "3", "1", "2", "5", "3", "1", "3", "2", "3", "1", "2"};
     
-    private String name, id;
+    private String studentName, studID;
 
     public Student ( String name , String id) {
-      // . . .
+      this.studentNameame = name;
+      this.studID = id;
     }
     abstract public void printInvoice();
   }
+
   //---------------------------
+
   class UndergraduateStudent extends Student{
     
     private String studentName, id;
@@ -66,7 +70,9 @@ public class DriverClass {
 
     public UndergraduateStudent(String name , String id , int [] undergradCrnsTaken , double gpa, boolean resident){
       super (name , id );
-      // . . .
+      this.gpa = gpa;
+      this.resident = resident;
+      this.undergradCrnsTaken = undergradCrnsTaken;
     }
 
     @Override
@@ -79,29 +85,34 @@ public class DriverClass {
 
     }
   }
+
   //---------------------------
+
   abstract class GraduateStudent extends Student {
     
     private String studentName, id;
-    private int [] gradCrnsTaken;
     private int TA;
 
 
-    public GraduateStudent ( String name , String id , int crn ) {
+    public GraduateStudent ( String name , String id, int crn ) {
       //crn is the crn that the grad student is a teaching assistant for
-      super ( name , id );
-      // . . .
+      super ( name , id);
+      this.TA = crn;
+
     }
   }
+
   //---------------------------
+
   class PhdStudent extends GraduateStudent {
     private String studentName, id, advisor, researchSubject;
     private int TA;
 
     public PhdStudent (String name, String id , String advisor, String researchSubject , int crn ) {
       //crn is the course number that the Phd student is a teaching assistant for
-      super ( name , id , crn );
-      // . . .
+      super ( name , id , crn);
+      this.researchSubject = researchSubject;
+      this.advisor = advisor;
     }
     @Override
     public void printInvoice() {
@@ -113,15 +124,21 @@ public class DriverClass {
       
     }
   }
+
   //---------------------------
+
   class MsStudent extends GraduateStudent {
-    // . . .
+    private String studentName, id;
+    private int [] gradCrnsTaken;
+    private int TA;
+
     public MsStudent (String name, String id , int [] gradCrnsTaken , int crn ) {
       // gradCoursesTaken is the array of the crns that the Ms student is taking
       //crn is the course number that the Phd student is a teaching assistant for
-      super ( name , id , crn );
-      // . . .
+      super ( name , id , crn);
+      this.gradCrnsTaken = gradCrnsTaken;
     }
+
     @Override
     public void printInvoice() {
       System.out.println("VALENCE COLLEGE");
