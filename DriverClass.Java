@@ -1,5 +1,5 @@
 //unit5.hw
- 
+
 //Group members: Isaac Calisto, Ethan Niessener
 
 
@@ -138,7 +138,7 @@ abstract class GraduateStudent extends Student {
     //crn is the crn that the grad student is a teaching assistant for
     super ( name , id );
     
- 
+
   }
 }
 //--------------------------
