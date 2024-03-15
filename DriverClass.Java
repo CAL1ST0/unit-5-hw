@@ -5,7 +5,7 @@
 
 //Group members: Isaac Calisto, Ethan Niessner
 //imports... main
-import java.util.*;
+
 public class DriverClass {
 // DO NOT CHANGE ANYTHING IN THIS CLASS (DriverClass)
 public static void main(String[] args) {
@@ -72,7 +72,7 @@ abstract class Student {
 
 class UndergraduateStudent extends Student{
 
-	float cost = 0, total = 0, discount = 0;
+	float cost = 0.0; float total = 0.0; float discount = 0.0;
 	int [] undergradCrnsTaken, creditHours;
 	int arrayLength;
 	double gpa;
