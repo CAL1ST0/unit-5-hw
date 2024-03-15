@@ -1,5 +1,5 @@
 //unit5.hw
- Ethan's-Branch
+ 
 //Group members: Isaac Calisto, Ethan Niessener
 
 
@@ -41,7 +41,7 @@ public static void main(String[] args) {
 
 }//end of main
 }
- Ethan's-Branch
+
 //---------------------------
 
 abstract class Student {
@@ -136,7 +136,7 @@ abstract class GraduateStudent extends Student {
     //crn is the crn that the grad student is a teaching assistant for
     super ( name , id );
     
- Ethan's-Branch
+ 
   }
 }
 //--------------------------
@@ -183,7 +183,7 @@ class MsStudent extends GraduateStudent {
       this.studID = id;
     }
     abstract public void printInvoice();
-  }
+  
 
   //---------------------------
 
@@ -276,4 +276,4 @@ class MsStudent extends GraduateStudent {
       
     }
   }
- main
+
