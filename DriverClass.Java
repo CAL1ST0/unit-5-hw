@@ -11,7 +11,7 @@ public class DriverClass {
   
   public static void main(String[] args) {
     Student s;
-    /* 
+    
     //***********
     s = new PhdStudent ("Zaydoun BenSellam",
     "zb5954" ,
@@ -19,7 +19,7 @@ public class DriverClass {
     "Fuzzy Topology" ,
     2599 );
     
-    s.printInvoice();*/
+    s.printInvoice();
   
     //***********
   
@@ -163,9 +163,15 @@ public class DriverClass {
     System.out.println("ORLANDO FL 10101");
     System.out.println("---------------------");
     System.out.println("\nFee Invoice Prepared for Student:");
-        
-
-
+    System.out.println(id + "-" + name);
+    System.out.println( );
+    System.out.println("RESEARCH");
+    System.out.println(researchSubject+"\t\t    $ 700.00\n");
+    System.out.println("\t   Health & id fees $ 35.00");
+    System.out.println( );
+    System.out.println("----------------------------------");
+    System.out.println("\tTotal Payments      $ 735.00");
+    System.out.println( );
 
 
     }
@@ -201,7 +207,7 @@ public class DriverClass {
       System.out.println("ORLANDO FL 10101");
       System.out.println("---------------------");
       System.out.println("\nFee Invoice Prepared for Student:");
-      System.out.println();
+      System.out.println( );
 
       
       System.out.println(id + "-" + name);
@@ -211,14 +217,12 @@ public class DriverClass {
       System.out.println("CRN\tCR_PREFIX\tCR_HOURS");
       System.out.println(crnArray[flag]+"\t"+ courseArray[flag]+"\t"+"\t"+creditHoursArray[flag]+ "\t    $ "+ cost*creditHoursArray[flag]);
       total += cost*creditHoursArray[flag];
-      System.out.println();
+      System.out.println( );
       System.out.println("\t\t  Health & id fees  $ 35.00");
-      System.out.println();
+      System.out.println( );
       System.out.println("---------------------------------------------");
-      //System.out.printf("\t\t\t\t    $ %.2f\n", 35.00);
-      //System.out.println("\t\t\t    ----------");
       System.out.printf("\t    TOTAL PAYMENTS          $ %.2f", (total+35.00));
-      System.out.println();
+      System.out.println( );
       System.out.println();
     }
   }
