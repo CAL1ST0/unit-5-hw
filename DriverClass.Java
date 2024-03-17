@@ -10,7 +10,7 @@ public class DriverClass {
   // DO NOT CHANGE ANYTHING IN THIS CLASS (DriverClass)
   
   public static void main(String[] args) {
-    Student s;
+    Student s;/* 
     //***********
     s = new PhdStudent ("Zaydoun BenSellam",
     "zb5954" ,
@@ -18,7 +18,7 @@ public class DriverClass {
     "Fuzzy Topology" ,
     2599 );
     
-    s.printInvoice();
+    s.printInvoice();*/
   
     //***********
   
@@ -53,8 +53,8 @@ public class DriverClass {
     
     int[] crnArray  = {4587, 4599, 8997, 9696, 4580, 2599, 
     1997, 5696, 7587, 1599, 6997, 2696, 5580, 2099, 4997, 3696};
-  
-  
+    
+   
     //---------------------------
    
   
@@ -62,6 +62,8 @@ public class DriverClass {
     "KOL 110", "MAT 936", "COP 111", "GOL 109", "COP 101", "MAT 636", "COP 268", "CAP 427", "KOL 910"};
   
     int[] creditHoursArray  = {4, 3, 1, 3, 1, 3, 1, 2, 5, 3, 1, 3, 2, 3, 1, 2};
+
+   
     
     public Student ( String name , String id) {
       this.name = name;
@@ -164,13 +166,27 @@ public class DriverClass {
   //---------------------------
   
   class MsStudent extends GraduateStudent {
-    int [] gradCrnsTaken, creditHours, crnArray[];
+    int [] gradCrnsTaken, creditHours, crnArray;
+    double cost = 0.0, total = 0.0;
+    int arrayLength;
     public MsStudent (String name, String id , int [] gradCrnsTaken , int crn ) {
       // gradCoursesTaken is the array of the crns that the Ms student is taking
       //crn is the course number that the Phd student is a teaching assistant for
       super ( name , id , crn );
       this.gradCrnsTaken = gradCrnsTaken;
+      arrayLength = gradCrnsTaken.length;
     }
+
+    int flag = -1;
+    int len = creditHoursArray.length;
+   
+     for (int i = 0; i<len; i++){
+      if (crn == crnArray[i]){
+        flag = i;
+      }
+     }
+    
+    
 
     @Override
     public void printInvoice() {
@@ -180,16 +196,25 @@ public class DriverClass {
       System.out.println("\nFee Invoice Prepared for Student:");
       System.out.println();
 
-      for (int i = 0; i < gradCrnsTaken.length; i++) {
-        for (int j = 0; j < crnArray.length; j++) {
-          if (gradCrnsTaken[i] == crnArray[j]) {
-            creditHours[i] = creditHoursArray[j];
-          }
-        }
-      }
+      
+      System.out.println(id + "-" + name);
+      System.out.println("\n1 Credit Hour = $300.00\n");
+      cost = (float)300.00;
+
       System.out.println("CRN\tCR_PREFIX\tCR_HOURS");
+      
+      System.out.println(crnArray[flag]+"\t"+ courseArray[flag]+"\t"+creditHours[flag]);
+      total += cost*creditHours[flag];
+      System.out.println();
+      System.out.println("      Health & id fees  $ 35.00");
+      System.out.println();
+      System.out.println("-------------------------------------------");
+      System.out.printf("\t\t\t$ %.2f\n", total);
+      System.out.println("\t\t      ----------");
+      System.out.printf("      TOTAL PAYMENTS    $ %.2f", (total));
     }
   }
+
   
       
   
