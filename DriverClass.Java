@@ -1,10 +1,8 @@
 //unit5.hw
  Ethan's-Branch
 //Group members: Isaac Calisto, Ethan Niessener
-
-
-//Group members: Isaac Calisto, Ethan Niessner
 //imports... main
+
 public class DriverClass {
 // DO NOT CHANGE ANYTHING IN THIS CLASS (DriverClass)
 public static void main(String[] args) {
