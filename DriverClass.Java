@@ -10,7 +10,8 @@ public class DriverClass {
   // DO NOT CHANGE ANYTHING IN THIS CLASS (DriverClass)
   
   public static void main(String[] args) {
-    Student s;/* 
+    Student s;
+    /* 
     //***********
     s = new PhdStudent ("Zaydoun BenSellam",
     "zb5954" ,
@@ -118,7 +119,7 @@ public class DriverClass {
     }
     System.out.println("CRN\tCR_PREFIX\tCR_HOURS");
     for (int i = 0; i < arrayLength; i++) {
-      System.out.printf(undergradCrnsTaken[i] + "\t" + creditHours[i] + "\t\t$ %.2f\n", (cost*creditHours[i]));
+      System.out.printf(undergradCrnsTaken[i] + "\t" +courseArray[i] + "\t\t" +creditHours[i] + "\t    $ %.2f\n", (cost*creditHours[i]));
       total += cost*creditHours[i];
     }
     
@@ -126,13 +127,13 @@ public class DriverClass {
       discount = total * (float)0.25;
     }
     System.out.println();
-    System.out.println("      Health & id fees  $ 35.00");
+    System.out.println("\t\t  Health & id fees  $ 35.00");
     System.out.println();
-    System.out.println("-------------------------------------------");
-    System.out.printf("\t\t\t$ %.2f\n", total);
-    System.out.printf("\t\t       -$ %.2f\n", discount);
-    System.out.println("\t\t      ----------");
-    System.out.printf("      TOTAL PAYMENTS    $ %.2f", (total - discount + 35));
+    System.out.println("---------------------------------------------");
+    System.out.printf("\t\t\t\t    $ %.2f\n", total);
+    System.out.printf("\t\t\t           -$ %.2f\n", discount);
+    System.out.println("\t\t\t           ----------");
+    System.out.printf("\t\t TOTAL PAYMENTS     $ %.2f", (total - discount + 35));
     }
   }
   //---------------------------
@@ -149,11 +150,12 @@ public class DriverClass {
   //--------------------------
   
   class PhdStudent extends GraduateStudent {
-    // . . .
+    String advisor, researchSubject;
     public PhdStudent (String name, String id , String advisor, String researchSubject , int crn ) {
       //crn is the course number that the Phd student is a teaching assistant for
       super ( name , id , crn );
-      // . . .
+      this.advisor = advisor;
+      this.researchSubject = researchSubject;
     }
     @Override
     public void printInvoice() {
@@ -161,30 +163,35 @@ public class DriverClass {
     System.out.println("ORLANDO FL 10101");
     System.out.println("---------------------");
     System.out.println("\nFee Invoice Prepared for Student:");
+        
+
+
+
+
     }
   }
   //---------------------------
   
   class MsStudent extends GraduateStudent {
-    int [] gradCrnsTaken, creditHours, crnArray;
+    int [] gradCrnsTaken;
     double cost = 0.0, total = 0.0;
     int arrayLength;
+    int flag = -1;
+    int len = creditHoursArray.length;
+   
+    
     public MsStudent (String name, String id , int [] gradCrnsTaken , int crn ) {
       // gradCoursesTaken is the array of the crns that the Ms student is taking
       //crn is the course number that the Phd student is a teaching assistant for
       super ( name , id , crn );
       this.gradCrnsTaken = gradCrnsTaken;
       arrayLength = gradCrnsTaken.length;
-    }
-
-    int flag = -1;
-    int len = creditHoursArray.length;
-   
-     for (int i = 0; i<len; i++){
-      if (crn == crnArray[i]){
-        flag = i;
+      for (int i = 0; i<len; i++){
+        if (crn == crnArray[i])
+          flag = i;
       }
-     }
+    }
+     
     
     
 
@@ -202,21 +209,20 @@ public class DriverClass {
       cost = (float)300.00;
 
       System.out.println("CRN\tCR_PREFIX\tCR_HOURS");
-      
-      System.out.println(crnArray[flag]+"\t"+ courseArray[flag]+"\t"+creditHours[flag]);
-      total += cost*creditHours[flag];
+      System.out.println(crnArray[flag]+"\t"+ courseArray[flag]+"\t"+"\t"+creditHoursArray[flag]+ "\t    $ "+ cost*creditHoursArray[flag]);
+      total += cost*creditHoursArray[flag];
       System.out.println();
-      System.out.println("      Health & id fees  $ 35.00");
+      System.out.println("\t\t  Health & id fees  $ 35.00");
       System.out.println();
-      System.out.println("-------------------------------------------");
-      System.out.printf("\t\t\t$ %.2f\n", total);
-      System.out.println("\t\t      ----------");
-      System.out.printf("      TOTAL PAYMENTS    $ %.2f", (total));
+      System.out.println("---------------------------------------------");
+      //System.out.printf("\t\t\t\t    $ %.2f\n", 35.00);
+      //System.out.println("\t\t\t    ----------");
+      System.out.printf("\t    TOTAL PAYMENTS          $ %.2f", (total+35.00));
+      System.out.println();
+      System.out.println();
     }
   }
+  
 
-  
-      
-  
   
   
