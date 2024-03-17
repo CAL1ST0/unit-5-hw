@@ -8,6 +8,7 @@
 
 public class DriverClass {
   // DO NOT CHANGE ANYTHING IN THIS CLASS (DriverClass)
+  
   public static void main(String[] args) {
     Student s;
     //***********
@@ -86,7 +87,8 @@ public class DriverClass {
       arrayLength = undergradCrnsTaken.length;
       this.resident = resident;
     }
-  
+    
+
     @Override
     public void printInvoice() {
       
@@ -121,8 +123,9 @@ public class DriverClass {
     if (gpa >= 3.5) {
       discount = total * (float)0.25;
     }
-    
-    System.out.println("\t\t  Health & id fees  $ 35.00");
+    System.out.println();
+    System.out.println("      Health & id fees  $ 35.00");
+    System.out.println();
     System.out.println("-------------------------------------------");
     System.out.printf("\t\t\t$ %.2f\n", total);
     System.out.printf("\t\t       -$ %.2f\n", discount);
@@ -133,11 +136,11 @@ public class DriverClass {
   //---------------------------
   
   abstract class GraduateStudent extends Student {
-  // . . .
+  int crn;
     public GraduateStudent ( String name , String id , int crn ) {
       //crn is the crn that the grad student is a teaching assistant for
       super ( name , id );
-      
+      this.crn = crn;
   
     }
   }
@@ -161,13 +164,14 @@ public class DriverClass {
   //---------------------------
   
   class MsStudent extends GraduateStudent {
-    // . . .
+    int [] gradCrnsTaken, creditHours, crnArray[];
     public MsStudent (String name, String id , int [] gradCrnsTaken , int crn ) {
       // gradCoursesTaken is the array of the crns that the Ms student is taking
       //crn is the course number that the Phd student is a teaching assistant for
       super ( name , id , crn );
-      // . . .
+      this.gradCrnsTaken = gradCrnsTaken;
     }
+
     @Override
     public void printInvoice() {
       System.out.println("VALENCE COLLEGE");
@@ -175,6 +179,15 @@ public class DriverClass {
       System.out.println("---------------------");
       System.out.println("\nFee Invoice Prepared for Student:");
       System.out.println();
+
+      for (int i = 0; i < gradCrnsTaken.length; i++) {
+        for (int j = 0; j < crnArray.length; j++) {
+          if (gradCrnsTaken[i] == crnArray[j]) {
+            creditHours[i] = creditHoursArray[j];
+          }
+        }
+      }
+      System.out.println("CRN\tCR_PREFIX\tCR_HOURS");
     }
   }
   
